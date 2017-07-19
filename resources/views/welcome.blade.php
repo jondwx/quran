@@ -104,6 +104,14 @@
                     </li>
                 </ul>
             </p>
+            <div>
+                <hr>
+                <h1 class="text-center">
+                    <a href="https://github.com/dwijpr/quran" target="_blank">
+                        <i class="fa fa-github"></i>
+                    </a>
+                </h1>
+            </div>
         </div>
     </div>
 @endsection
