@@ -12,6 +12,9 @@ body {
     font-family: qalammajeed;
     font-size: 28px;
 }
+.aya-ar .ar-mark {
+    margin-left: 24px;
+}
 .aya-number {
     position: absolute;
     top: 10px;

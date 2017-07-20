@@ -38,13 +38,15 @@ class Nav {
                 ($ayas->first()->id - 1 === 0) ?
                 Aya::count() : $ayas->first()->id - 1
             );
-            $prev->url = url('/' . $aya_prev->sura->id . '/' . $aya_prev->id);
+            $prev->url =
+                url('/' . $aya_prev->sura->id . '/' . $aya_prev->aya_id);
             $prev->label = $aya_prev->sura->title . ' ~ ' . $aya_prev->aya_id;
             $aya_next = Aya::find(
                 ($ayas->last()->id + 1) > Aya::count() ?
                 1 : $ayas->last()->id + 1
             );
-            $next->url = url('/' . $aya_next->sura->id . '/' . $aya_next->id);
+            $next->url =
+                url('/' . $aya_next->sura->id . '/' . $aya_next->aya_id);
             $next->label = $aya_next->sura->title . ' ~ ' . $aya_next->aya_id;
         }
         $this->prev = $prev;
