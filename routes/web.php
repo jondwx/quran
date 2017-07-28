@@ -10,6 +10,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/log', 'LogController@index');
 
 Route::get('/{sura}/{aya_start?}/{aya_end?}', 'QuranController@index');
 

@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Aya extends Model
 {
+    protected $connection = 'quran';
+
     public function words() {
         return $this->hasMany(Word::class);
     }
