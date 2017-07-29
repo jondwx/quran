@@ -15,7 +15,7 @@
         >
             {!! implode('', $ars) !!}
         </div>
-        <hr>
+        <hr style="border-color: rgba(0, 0, 0, .2);">
         <i style="font-weight: 200;">
             {!! implode(' &bull; ', $ids) !!}
         </i>

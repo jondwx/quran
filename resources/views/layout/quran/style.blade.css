@@ -2,8 +2,9 @@ body {
     padding-top: 50px;
 }
 .view {
+    background-image: url("{{ asset('/img/bg.png') }}");
+    background-size: 100% 100%;
     position: relative;
-    border: 1px solid #ddd;
     margin: 8px 0px;
     padding: 16px;
 }
