@@ -9,7 +9,6 @@ body {
 }
 .aya-ar {
     line-height: 2em;
-    padding-left: 56px;
     font-family: qalammajeed;
     font-size: 28px;
 }
@@ -17,22 +16,21 @@ body {
     margin-left: 24px;
 }
 .aya-number {
-    position: absolute;
-    top: 10px;
+    position: relative;
+    top: 4px;
     display: inline-block;
     width: 36px;
     height: 36px;
     font-size: 16px;
-    margin-right: 24px;
 }
 .aya-number img {
     width: 36px;
     position: absolute;
-    top: 0px;
 }
 .aya-number .number {
+    font-family: serif;
     position: relative;
-    top: 12px;
+    top: -8px;
     width: 100%;
     font-size: 12px;
     font-weight: bold;
