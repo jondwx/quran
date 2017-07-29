@@ -1,5 +1,11 @@
 @extends('template.bootstrap')
 
+@section('meta')
+    <meta
+        property="og:image"
+        content="{{ asset('/img/ss/index.png') }}" />
+@endsection
+
 @section('style')
     @parent
     <style>
