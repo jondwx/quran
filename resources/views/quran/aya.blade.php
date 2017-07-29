@@ -1,15 +1,7 @@
+{!! clean($aya->text) !!}
 <div
-    class="aya-ar"
-    dir="rtl"
-    lang="ar"
+    class="aya-number"
 >
-    {!! clean($aya->text) !!}
-    <div
-        class="aya-number"
-    >
-        {{ Html::image('/img/aya-number-frame.png') }}
-        <div class="number text-center">{{ ar($aya->aya_id) }}</div>
-    </div>
+    {{ Html::image('/img/aya-number-frame.png') }}
+    <div class="number text-center">{{ ar($aya->aya_id) }}</div>
 </div>
-<hr>
-<div>{{ $aya->terjemahan }}</div>

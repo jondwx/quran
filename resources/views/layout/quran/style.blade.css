@@ -1,11 +1,11 @@
 body {
     padding-top: 50px;
 }
-.aya {
+.view {
     position: relative;
     border: 1px solid #ddd;
     margin: 8px 0px;
-    padding: 8px;
+    padding: 16px;
 }
 .aya-ar {
     line-height: 2em;
@@ -13,7 +13,10 @@ body {
     font-size: 28px;
 }
 .aya-ar .ar-mark {
-    margin-left: 24px;
+    position: relative;
+    right: -6px;
+    display: inline-block;
+    width: 12px;
 }
 .aya-number {
     position: relative;
@@ -22,6 +25,7 @@ body {
     width: 36px;
     height: 36px;
     font-size: 16px;
+    margin-left: 4px;
 }
 .aya-number img {
     width: 36px;

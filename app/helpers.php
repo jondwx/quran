@@ -203,7 +203,8 @@ if (!function_exists('clean')) {
             'ۗ',
             'ۛ',
             'ۚ',
-            ''
+            '',
+            'ۖ',
         ];
         $replace = $search;
         array_walk($replace, function (&$i) {
