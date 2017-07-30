@@ -1,5 +1,16 @@
 @extends('layout.quran')
 
+@section('og-title', 'Quran ~ '. $title)
+@section('title', 'Quran ~ '. $title)
+
+@section('meta')
+    @if (url()->current() === url('/64/3'))
+    <meta
+        property="og:image"
+        content="{{ asset('/img/ss/quran-64-3.jpg') }}" />
+    @endif
+@endsection
+
 @section('ayas')
     @foreach ($ayas as $aya)
         <?php
@@ -19,15 +30,7 @@
         <i style="font-weight: 200;">
             {!! implode(' &bull; ', $ids) !!}
             <span style="font-weight: 400;font-style: normal;">
-                (
-                    {{ $ayas->first()->sura->title }}
-                    :
-                    {{
-                        count($ayas) > 1
-                        ? $ayas->first()->aya_id . '-' . $ayas->last()->aya_id
-                        : $ayas->first()->aya_id
-                    }}
-                )
+                ({{ $title }})
             </span>
         </i>
     </div>

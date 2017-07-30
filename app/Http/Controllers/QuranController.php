@@ -73,7 +73,16 @@ class QuranController extends Controller
         }
         $suras = Sura::all();
         $nav = new Nav($ayas);
+        $title =
+            $ayas->first()->sura->title . ': ' .
+            (
+                count($ayas) > 1
+                ? $ayas->first()->aya_id . '-' . $ayas->last()->aya_id
+                : $ayas->first()->aya_id
+            )
+        ;
         return view('quran.index', [
+            'title' => $title,
             'suras' => $suras,
             'ayas'  => $ayas,
             'nav'   => $nav,

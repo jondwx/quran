@@ -7,7 +7,7 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
         <meta property="og:title" content="@yield(
-            'page-title', config('app.name')
+            'og-title', @$title?config('app.name'):''
         )" />
         <meta property="og:url" content="{{ url()->current() }}" />
 
