@@ -18,6 +18,17 @@
         <hr style="border-color: rgba(0, 0, 0, .2);">
         <i style="font-weight: 200;">
             {!! implode(' &bull; ', $ids) !!}
+            <span style="font-weight: 400;font-style: normal;">
+                (
+                    {{ $ayas->first()->sura->title }}
+                    :
+                    {{
+                        count($ayas) > 1
+                        ? $ayas->first()->aya_id . '-' . $ayas->last()->aya_id
+                        : $ayas->first()->aya_id
+                    }}
+                )
+            </span>
         </i>
     </div>
 @endsection

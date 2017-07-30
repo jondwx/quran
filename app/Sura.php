@@ -134,7 +134,7 @@ class Sura extends Model
     }
 
     public function getTitleAttribute() {
-        return $this->id. ' &bull; ' . self::$titles[$this->id - 1];
+        return self::$titles[$this->id - 1];
     }
 
     public function getCountAttribute() {
