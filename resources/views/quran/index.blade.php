@@ -19,20 +19,23 @@
         ?>
     @endforeach
     <div class="view">
-        <div
-            class="aya-ar"
-            dir="rtl"
-            lang="ar"
-        >
-            {!! implode('', $ars) !!}
+        <div class="background-image"></div>
+        <div class="content">
+            <div
+                class="aya-ar"
+                dir="rtl"
+                lang="ar"
+            >
+                {!! implode('', $ars) !!}
+            </div>
+            <hr style="border-color: rgba(0, 0, 0, .2);">
+            <i style="font-weight: 200;">
+                {!! implode(' &bull; ', $ids) !!}
+                <span style="font-weight: 400;font-style: normal;">
+                    ({{ $title }})
+                </span>
+            </i>
         </div>
-        <hr style="border-color: rgba(0, 0, 0, .2);">
-        <i style="font-weight: 200;">
-            {!! implode(' &bull; ', $ids) !!}
-            <span style="font-weight: 400;font-style: normal;">
-                ({{ $title }})
-            </span>
-        </i>
     </div>
 @endsection
 

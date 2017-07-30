@@ -2,6 +2,6 @@
 <div
     class="aya-number"
 >
-    {{ Html::image('/img/aya-number-frame.png') }}
+    <i class="fa fa-circle-thin"></i>
     <div class="number text-center">{{ ar($aya->aya_id) }}</div>
 </div>

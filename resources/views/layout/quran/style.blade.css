@@ -2,11 +2,22 @@ body {
     padding-top: 50px;
 }
 .view {
-    background-image: url("{{ asset('/img/bg.png') }}");
-    background-size: 100% 100%;
     position: relative;
     margin: 8px 0px;
     padding: 16px;
+}
+.view .background-image {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-image: url("{{ asset('/img/bg.png') }}");
+    background-size: cover;
+    opacity: .9;
+    width: 100%;
+    height: 100%;
+}
+.view .content {
+    position: relative;
 }
 .aya-ar {
     line-height: 2em;
@@ -21,24 +32,28 @@ body {
 }
 .aya-number {
     position: relative;
-    top: 4px;
+    top: 6px;
     display: inline-block;
     width: 36px;
     height: 36px;
-    font-size: 16px;
-    margin-left: 4px;
+    margin-left: 6px;
 }
-.aya-number img {
-    width: 36px;
+.aya-number i.fa {
+    text-align: center;
     position: absolute;
+    top: 2px;
+    width: 100%;
+    display: inline-block;
+    font-size: 36px;
 }
 .aya-number .number {
-    font-family: serif;
-    position: relative;
+    text-align: center;
+    position: absolute;
     top: -8px;
+    display: inline-block;
+    font-family: serif;
     width: 100%;
     font-size: 12px;
-    font-weight: bold;
 }
 hr {
     margin-bottom: 4px;
