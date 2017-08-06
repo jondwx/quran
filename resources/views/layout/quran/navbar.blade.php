@@ -55,6 +55,24 @@
                     </a>
                 </div>
             {{ Form::close() }}
+            {{ Form::open([
+                'id' => 'navigator',
+                'class' => 'navbar-form navbar-right',
+            ]) }}
+            <form id="view-style" class="navbar-form navbar-right">
+                <div class="form-group">
+                    <a
+                        href="javascript:"
+                        class="btn btn-default bootstrap-colorpicker background"
+                    >Background</a>
+                </div>
+                <div class="form-group">
+                    <a
+                        href="javascript:"
+                        class="btn btn-default bootstrap-colorpicker text"
+                    >Text</a>
+                </div>
+            {{ Form::close() }}
         </div>
     </div>
 </nav>

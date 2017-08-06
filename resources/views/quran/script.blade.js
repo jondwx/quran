@@ -1,3 +1,21 @@
+$(".bootstrap-colorpicker").colorpicker();
+
+$('.bootstrap-colorpicker.background')
+    .colorpicker().on('changeColor', function(e) {
+        $('.view .background-image').css({
+            backgroundColor: e.color.toString('rgba')
+        });
+    }
+);
+
+$('.bootstrap-colorpicker.text')
+    .colorpicker().on('changeColor', function(e) {
+        $('.view .content').css({
+            color: e.color.toString('rgba')
+        });
+    }
+);
+
 var suras = {!! json_encode($suras) !!};
 
 var formNavigator = $("#navigator");

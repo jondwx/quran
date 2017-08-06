@@ -3,6 +3,13 @@
 @section('og-title', 'Quran ~ '. $title)
 @section('title', 'Quran ~ '. $title)
 
+@section('style')
+    @parent
+    {{ Html::style(
+        '/bootstrap-colorpicker/dist/css/bootstrap-colorpicker.css'
+    ) }}
+@endsection
+
 @section('meta')
     @if (url()->current() === url('/64/3'))
     <meta
@@ -41,6 +48,7 @@
 
 @section('script')
     @parent
+    {{ Html::script('/bootstrap-colorpicker/dist/js/bootstrap-colorpicker.js') }}
     <script>
         $(function () {
             @include('quran.script')
