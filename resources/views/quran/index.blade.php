@@ -26,7 +26,7 @@
         ?>
     @endforeach
     <div class="view">
-        <div class="background-image"></div>
+        <div class="background"></div>
         <div class="content">
             <div
                 class="aya-ar"
@@ -49,6 +49,7 @@
 @section('script')
     @parent
     {{ Html::script('/bootstrap-colorpicker/dist/js/bootstrap-colorpicker.js') }}
+    {{ Html::script('/js-cookie/2.1.4/src/js.cookie.js') }}
     <script>
         $(function () {
             @include('quran.script')

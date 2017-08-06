@@ -22,10 +22,26 @@
             id="bs-example-navbar-collapse-1"
         >
             {{ Form::open([
+                'id' => 'view-color',
+                'class' => 'navbar-form navbar-left',
+            ]) }}
+                <div class="form-group text-right">
+                    <a
+                        href="javascript:"
+                        class="btn btn-default btn-block bootstrap-colorpicker background"
+                    >Background</a>
+                </div>
+                <div class="form-group">
+                    <a
+                        href="javascript:"
+                        class="btn btn-default btn-block bootstrap-colorpicker text"
+                    >Text</a>
+                </div>
+            {{ Form::close() }}
+            {{ Form::open([
                 'id' => 'navigator',
                 'class' => 'navbar-form navbar-right',
             ]) }}
-            <form id="navigator" class="navbar-form navbar-right">
                 <div class="form-group">
                     {{ Form::select(
                         'sura', $suras->pluck('title', 'id')
@@ -53,24 +69,6 @@
                     >
                         <i class="fa fa-refresh"></i>
                     </a>
-                </div>
-            {{ Form::close() }}
-            {{ Form::open([
-                'id' => 'navigator',
-                'class' => 'navbar-form navbar-right',
-            ]) }}
-            <form id="view-style" class="navbar-form navbar-right">
-                <div class="form-group">
-                    <a
-                        href="javascript:"
-                        class="btn btn-default bootstrap-colorpicker background"
-                    >Background</a>
-                </div>
-                <div class="form-group">
-                    <a
-                        href="javascript:"
-                        class="btn btn-default bootstrap-colorpicker text"
-                    >Text</a>
                 </div>
             {{ Form::close() }}
         </div>

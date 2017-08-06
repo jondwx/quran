@@ -1,18 +1,27 @@
-$(".bootstrap-colorpicker").colorpicker();
+var backgroundColor = Cookies.get('quran_background_color');
+var color = Cookies.get('quran_color');
+if (backgroundColor) {
+    $('.view .background').css({backgroundColor: backgroundColor});
+}
+if (color) {
+    $('.view .content').css({color: color});
+}
 
-$('.bootstrap-colorpicker.background')
-    .colorpicker().on('changeColor', function(e) {
-        $('.view .background-image').css({
-            backgroundColor: e.color.toString('rgba')
-        });
-    }
-);
+$(".bootstrap-colorpicker").colorpicker();
 
 $('.bootstrap-colorpicker.text')
     .colorpicker().on('changeColor', function(e) {
-        $('.view .content').css({
-            color: e.color.toString('rgba')
-        });
+        var color = e.color.toString('rgba');
+        Cookies.set('quran_color', color);
+        $('.view .content').css({color: color});
+    }
+);
+
+$('.bootstrap-colorpicker.background')
+    .colorpicker().on('changeColor', function(e) {
+        var color = e.color.toString('rgba');
+        Cookies.set('quran_background_color', color);
+        $('.view .background').css({backgroundColor: color});
     }
 );
 
